@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.5.4"
+  },
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "n_train": 500,
+    "n_test_per_intervention_arm": 400,
+    "structural_coefficients": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.7,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.6,
+        0.0,
+        0.0
+      ],
+      [
+        0.4,
+        0.0,
+        0.8,
+        0.0
+      ]
+    ],
+    "mixing": [
+      [
+        1.0,
+        0.2,
+        0.0,
+        0.1,
+        -0.4,
+        0.5
+      ],
+      [
+        0.1,
+        1.0,
+        0.2,
+        -0.3,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        1.0,
+        0.4,
+        0.0,
+        -0.3
+      ],
+      [
+        0.2,
+        0.0,
+        0.1,
+        1.0,
+        0.3,
+        0.4
+      ]
+    ],
+    "intervention_contrast": [
+      0,
+      2
+    ],
+    "ridge": 1
+  },
+  "data": "synthetic genes and morphology proxies, not biological images",
+  "runs": [
+    {
+      "seed": 0,
+      "observational_prediction_mae": 0.1633919315666154,
+      "true_total_effects": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.7,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.42,
+          -0.6,
+          1.0,
+          0.0
+        ],
+        [
+          0.06400000000000002,
+          -0.48,
+          0.8,
+          1.0
+        ]
+      ],
+      "evaluation": {
+        "iid_imaging": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.03034718738858847,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.05399347433279925
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.03717686014760509,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.052026056801703836
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.31261482236720584,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.5973483222801276
+          }
+        },
+        "treatment_imaging_shift": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.03034718738858847,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.05399347433279925
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.2809809421797186,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.27396123177877396
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.31261482236720584,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.5973483222801276
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "observational_prediction_mae": 0.16703433834887324,
+      "true_total_effects": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.7,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.42,
+          -0.6,
+          1.0,
+          0.0
+        ],
+        [
+          0.06400000000000002,
+          -0.48,
+          0.8,
+          1.0
+        ]
+      ],
+      "evaluation": {
+        "iid_imaging": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.02605150275370062,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.02781977955041848
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.03773621696987041,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.03936839076556093
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.28238309790915406,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.556293777446996
+          }
+        },
+        "treatment_imaging_shift": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.02605150275370062,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.02781977955041848
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.2687247019453627,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.30207021785037297
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.28238309790915406,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.556293777446996
+          }
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "observational_prediction_mae": 0.16161359754565516,
+      "true_total_effects": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.7,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.42,
+          -0.6,
+          1.0,
+          0.0
+        ],
+        [
+          0.06400000000000002,
+          -0.48,
+          0.8,
+          1.0
+        ]
+      ],
+      "evaluation": {
+        "iid_imaging": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.03197889646096036,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.05001894625217721
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.04290938286358062,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.052757986921134814
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.29880124445129375,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.5735354367463253
+          }
+        },
+        "treatment_imaging_shift": {
+          "observed_gene_interventions": {
+            "effect_mae": 0.03197889646096036,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.05001894625217721
+          },
+          "morphology_ridge": {
+            "effect_mae": 0.29001909508267054,
+            "nonzero_sign_accuracy": 1.0,
+            "zero_effect_mae": 0.30254048408713924
+          },
+          "constant_proxy": {
+            "effect_mae": 0.4415,
+            "nonzero_sign_accuracy": 0.0,
+            "zero_effect_mae": 0.0
+          },
+          "observational_association": {
+            "effect_mae": 0.29880124445129375,
+            "nonzero_sign_accuracy": 0.9,
+            "zero_effect_mae": 0.5735354367463253
+          }
+        }
+      }
+    }
+  ]
+}
